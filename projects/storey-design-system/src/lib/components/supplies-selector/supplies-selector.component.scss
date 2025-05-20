@@ -1,0 +1,71 @@
+@import '../../../styles/variables.scss';
+
+.supplies-selector-container {
+    border-radius: 16px;
+    position: relative;
+    padding: 16px;
+}
+
+.supplies-selector-content {
+    position: absolute;
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+
+    &.up {
+        top: -363px;
+    }
+
+    &.down {
+        top: 127px;
+    }
+}
+
+.supplies-selector-content-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid $color-gray-300;
+    border-radius: 16px 16px;
+    margin-top: 4px;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.supplies-selector-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.supplies-selector-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .supplies-selector-content {
+        &.down {
+            top: 140px;
+        }
+    }
+}

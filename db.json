@@ -1,0 +1,56 @@
+{
+  "supplies": [
+    {
+      "id": 1,
+      "address": "Primer supply Primer supply Primer supply Primer supply juju hydh fhbfi djn",
+      "locality": "Madrid Centro",
+      "alias": "Sucursal Principal",
+      "nis": "123456789",
+      "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+      ],
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "address": "Segundo supply",
+      "locality": "Madrid Norte",
+      "alias": "Sucursal Castellana",
+      "nis": "987654321",
+      "tags": [
+        "tag4",
+        "tag5",
+        "tag6"
+      ],
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "address": "Tercer supply",
+      "locality": "Madrid Sur",
+      "alias": "Sucursal Malasaña",
+      "nis": "123456789",
+      "tags": [
+        "tag7",
+        "tag8",
+        "tag9"
+      ],
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "address": "Cuarto supply",
+      "locality": "Madrid Oeste",
+      "alias": "Sucursal Chamartín",
+      "nis": "123456789",
+      "tags": [
+        "tag10",
+        "tag11",
+        "tag12"
+      ],
+      "status": "active"
+    }
+  ]
+}

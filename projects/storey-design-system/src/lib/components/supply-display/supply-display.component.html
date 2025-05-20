@@ -1,0 +1,24 @@
+<div class="supply-display-container">
+  <storey-typography variant="body-md" class="supply-list-title" color="text-middle-gray" fontWeight="600">
+    Lista de suministros asociados a tu cuenta
+  </storey-typography>
+  
+  <div class="supply-list">
+    <ul class="supply-list-items">
+      <li *ngFor="let supply of supplies" (click)="onSupplyClick(supply)">
+        <storey-list-item 
+          [title]="supply.address" 
+          [nis]="supply.locality" 
+          [alias]="supply.alias"
+          [searchTerm]="searchQuery">
+        </storey-list-item>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="footer-button">
+    <button class="view-more">
+      Ver los suministros asociados ➔
+    </button>
+  </div>
+</div>

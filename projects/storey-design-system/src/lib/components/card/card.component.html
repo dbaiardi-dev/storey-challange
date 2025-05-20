@@ -1,0 +1,28 @@
+<div
+  class="storey-card"
+  [class.with-border]="border"
+  [class.collapsible]="collapsible"
+  [class.is-expanded]="isExpanded"
+  [class.warning]="mode === 'warning'"
+>
+  <ng-container *ngIf="functionality; else simpleContent">
+    <div class="card-content-left">
+      <ng-content select="[left]"></ng-content>
+    </div>
+    <div class="card-content-right">
+      <ng-content select="[right]"></ng-content>
+      <button *ngIf="collapsible" class="collapse-btn" (click)="toggleCollapse()">
+        <img src="angle-down.svg" [ngClass]="{'rotated': isExpanded}">
+      </button>
+    </div>
+  </ng-container>
+  <ng-template #simpleContent>
+    <div class="card-content-full">
+      <ng-content></ng-content>
+    </div>
+  </ng-template>
+</div>
+<!-- Cuerpo expandido -->
+<div *ngIf="collapsible && isExpanded" class="card-expanded-body">
+  <ng-content select="[expanded]"></ng-content>
+</div> 

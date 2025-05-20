@@ -1,0 +1,25 @@
+<div class="supply-context-menu">
+  <div class="menu-header">
+    <span>Opciones del suministro</span>
+    <button class="close-btn" (click)="onClose()">
+      <fa-icon [icon]="faTimes"></fa-icon>
+    </button>
+  </div>
+  <div class="menu-options">
+    <button class="option edit" (click)="onEditAlias()">
+      <span class="icon-bg">
+        <fa-icon [icon]="faPenToSquare"></fa-icon>
+      </span>
+      <span class="option-label">Editar alias</span>
+    </button>
+    <button class="option unlink" (click)="onUnlink()">
+      <span class="icon-sm danger">
+        <fa-icon [icon]="faUnlink"></fa-icon>
+      </span>
+      <span>
+        <span class="option-label danger">Desvincular suministro</span>
+        <span class="option-desc">Esta acción eliminará la conexión entre el suministro y tu cuenta.</span>
+      </span>
+    </button>
+  </div>
+</div> 

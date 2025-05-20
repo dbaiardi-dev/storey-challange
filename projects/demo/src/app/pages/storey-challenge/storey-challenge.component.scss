@@ -1,0 +1,74 @@
+.storey-challenge-page {
+  min-height: 100vh;
+  display: flex;
+  background: #0562B9;
+  box-sizing: border-box;
+  padding-top: 16px;
+}
+
+.storey-challenge-aside {
+  width: 312px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.storey-challenge-body {
+  background-color: #F2F2F2;
+  border-radius: 24px 0 0 0;
+  flex: 1;
+}
+
+.storey-challenge-body-content {
+  max-width: 1296px;
+  display: flex;
+  margin: 24px auto;
+  gap: 24px;
+}
+
+
+
+.storey-card-cotainer{
+  flex: 1;
+  width: 100%;
+}
+
+.challenge-exit-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 2000;
+  background:  #6a47dc54 0%;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 32px;
+  font-size: 1.1em;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(60, 180, 231, 0.18);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.torey-card-cotainer {
+  flex: 1
+}
+
+
+@media (max-width: 768px) {
+  .storey-challenge-body-content {
+    flex-direction: column-reverse;
+    gap: 16px;
+    margin: 0;
+
+  }
+
+  .storey-challenge-aside  {
+    display: none;
+  }
+
+  .storey-challenge-body {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/storey-design-system",
+  "lib": {
+    "entryFile": "src/lib/storey-design-system.ts"
+  }
+}

@@ -1,0 +1,20 @@
+<div class="storey-challenge-page">
+    <aside class="storey-challenge-aside">
+    </aside>
+    <div class="storey-challenge-body">
+        <div class="storey-challenge-body-content">
+            <div class="storey-card-cotainer">
+                <storey-error-status-message *ngIf="errorSignal()" title="Error de conexión"
+                    [message]="errorSignal() ?? ''" (click)="clearError()">
+                </storey-error-status-message>
+                <storey-skeleton-loading *ngIf="loading()" width="100%" height="154px"></storey-skeleton-loading>
+                <storey-card-supply-selector *ngIf="!loading() && supplies.length > 0"
+                    [supplies]="supplies"></storey-card-supply-selector>
+            </div>
+            <storey-add-button label="Asociar Suministro" (clicked)="addSupply()"
+                [disabled]="loading()"></storey-add-button>
+        </div>
+    </div>
+
+    <button class="challenge-exit-btn" (click)="onExitChallenge()">Salir modo challenge</button>
+</div>

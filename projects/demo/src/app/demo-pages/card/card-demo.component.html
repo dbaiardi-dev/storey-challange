@@ -1,0 +1,2 @@
+<storey-error-status-message *ngIf="errorSignal()" title="Error de conexión" [message]="errorSignal() ?? ''">
+<storey-card-supply-selector *ngIf=" supplies.length > 0" [supplies]="supplies"></storey-card-supply-selector>

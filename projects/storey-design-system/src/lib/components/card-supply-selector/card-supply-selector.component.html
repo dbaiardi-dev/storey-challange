@@ -1,0 +1,55 @@
+<storey-skeleton-loading *ngIf="loading" width="100%" height="154px"></storey-skeleton-loading>
+
+<storey-card *ngIf="supplies.length > 0 && !errorMessage && !loading" [border]="true" [functionality]="true"
+  [collapsible]="supplies.length > 1">
+  <div left class="card-content-left">
+    <ng-container *ngIf="selectedSupply?.address as address">
+      <storey-typography variant="heading-lg" class="ellipsis"
+        [attr.title]="address.length > (isMobile ? 20 : 40) ? address : null">
+        {{ address.length > (isMobile ? 20 : 40) ? (address | slice:0:(isMobile ? 20 : 40)) + '...' : address }}
+      </storey-typography>
+    </ng-container>
+    <div class="description-wrapper">
+      <storey-typography class="ellipsis" variant="body-lg">NIS: {{ selectedSupply?.nis }}</storey-typography>
+      <storey-typography class="ellipsis" variant="body-lg">|</storey-typography>
+      <storey-typography class="ellipsis" variant="body-lg">Alias: {{ selectedSupply?.alias }}</storey-typography>
+    </div>
+    <div class="tags-container">
+      <ng-container *ngIf="selectedSupply as supply">
+        <ng-container *ngIf="supply.tags && supply.tags.length > 0">
+          <storey-tag [icon]="faArrowUp" [label]="supply.tags[0]"></storey-tag>
+          <span class="more-tags-indicator" *ngIf="isMobile && supply.tags.length > 1">
+            +{{ supply.tags.length - 1 }}
+          </span>
+          <ng-container *ngIf="!isMobile">
+            <storey-tag *ngFor="let tag of supply.tags.slice(1)" [icon]="faArrowUp" [label]="tag"></storey-tag>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div right style="position: relative;">
+    <button class="card-button" (click)="onOpenContextMenu()">
+      <img src="cog.svg" alt="cog">
+    </button>
+    <supply-context-menu *ngIf="showContextMenu && !isMobile" (close)="onCloseContextMenu()" (editAlias)="onEditAlias()"
+      (unlink)="onUnlinkSupply()" style="position: absolute; top: 60px; right: 0; z-index: 1000;">
+    </supply-context-menu>
+    <storey-modal *ngIf="showContextMenu && isMobile" (close)="onCloseContextMenu()">
+      <supply-context-menu (close)="onCloseContextMenu()" (editAlias)="onEditAlias()"
+        (unlink)="onUnlinkSupply()"></supply-context-menu>
+    </storey-modal>
+  </div>
+
+  <div expanded>
+    <div>
+      <storey-supplies-selector [supplies]="nosSelectedSupplies"
+        (supplySelected)="onSupplySelect($event)"></storey-supplies-selector>
+    </div>
+  </div>
+</storey-card>
+
+<storey-empty-status-message *ngIf="supplies.length < 1 && !errorMessage && !loading"></storey-empty-status-message>
+
+<storey-error-status-message *ngIf="errorMessage && !loading" title="Error de conexión" [message]="errorMessage">
+</storey-error-status-message>

@@ -1,0 +1,6 @@
+{
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  }
+  

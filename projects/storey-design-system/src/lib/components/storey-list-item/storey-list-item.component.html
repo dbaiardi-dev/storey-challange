@@ -1,0 +1,10 @@
+<li class="storey-list-item">
+  <storey-typography variant="body-md-2" color="text-dark-gray" fontWeight="600" class="list-title"
+    [html]="searchTerm ? (title | highlight:searchTerm) : undefined">
+    {{ title }}
+  </storey-typography>
+  <storey-typography variant="body-sm-2" class="list-details"
+    [html]="searchTerm ? ('NIS: ' + nis + ' | Alias: ' + alias | highlight:searchTerm) : undefined">
+    NIS: {{ nis }} | Alias: {{ alias }}
+  </storey-typography>
+</li> 

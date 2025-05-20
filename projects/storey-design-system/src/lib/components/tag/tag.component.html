@@ -1,0 +1,12 @@
+<div class="storey-tag">
+  <ng-container *ngIf="icon">
+    <div class="icon-container">
+      <fa-icon [icon]="icon"></fa-icon>
+    </div>
+  </ng-container>
+  <span class="tag-content">
+    <storey-typography variant="body-md" color="text-on-primary-container">
+      {{ label }}
+    </storey-typography>
+  </span>
+</div> 

@@ -1,0 +1,59 @@
+<!-- If there is only 1 (non selected) supply-->
+<div *ngIf="supplies.length === 1">
+  <storey-card [border]="true" (click)="onSupplyClick(supplies[0])">
+    <div class="supplies-selector-card-content">
+      <div class="title">
+        <storey-typography variant="body-md">{{ supplies[0].associatedSupply }}</storey-typography>
+      </div>
+      <storey-typography variant="heading-md">{{ supplies[0].address }}</storey-typography>
+      <div class="row-content">
+        <storey-typography variant="body-md">Localidad: {{ supplies[0].locality }}</storey-typography>
+        <storey-typography variant="body-md">|</storey-typography>
+        <storey-typography variant="body-md">Alias: {{ supplies[0].alias }}</storey-typography>
+      </div>
+    </div>
+  </storey-card>
+</div>
+
+<!-- If there is more than (non selected) 2 supplies -->
+<div *ngIf="supplies.length === 2" class="two-columns">
+  <storey-card [border]="true" *ngFor="let supply of supplies" (click)="onSupplyClick(supply)">
+    <div class="supplies-selector-card-content">
+      <div class="title">
+        <storey-typography variant="body-md">{{ supply.associatedSupply }}</storey-typography>
+      </div>
+      <storey-typography variant="heading-md">{{ supply.address }}</storey-typography>
+      <div class="row-content">
+        <storey-typography variant="body-md">Localidad: {{ supply.locality }}</storey-typography>
+        <storey-typography variant="body-md">|</storey-typography>
+        <storey-typography variant="body-md">Alias: {{ supply.alias }}</storey-typography>
+      </div>
+    </div>
+  </storey-card>
+</div>
+
+<!-- If there is more than 3 (non selected) supplies, show the selector -->
+<ng-container *ngIf="supplies.length > 2">
+  <div class="supplies-selector-container">
+    <div class="supplies-selector-header">
+      <storey-typography variant="heading-sm" color="text-on-primary-container">
+        Encontrá más rápido
+      </storey-typography>
+      <storey-typography variant="body-md">
+        Hemos reemplazado las tarjetas por un buscador para facilitar la selección cuando hay más de 2 suministros.
+      </storey-typography>
+    </div>
+    <storey-supply-search [supplies]="supplies" (filtered)="onFilteredSuppliesChange($event)"></storey-supply-search>
+    <div [class]="position" class="supplies-selector-content">
+      <ng-container *ngIf="filteredSupplies.length > 0">
+        <storey-supply-display [supplies]="filteredSupplies" [searchQuery]="searchQuery"
+          (supplySelected)="onSupplySelected($event)"></storey-supply-display>
+      </ng-container>
+      <ng-container *ngIf="searchQuery && filteredSupplies.length === 0">
+        <div class="supplies-selector-content-empty">
+          <storey-typography variant="body-md">No se encontraron resultados</storey-typography>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

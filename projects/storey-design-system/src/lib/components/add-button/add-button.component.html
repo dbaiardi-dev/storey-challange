@@ -1,0 +1,10 @@
+<button [disabled]="disabled"  class="add-btn"  (click)="onClick()">
+  <span class="icon-circle">
+    <fa-icon [icon]="icon"></fa-icon>
+  </span>
+  <span class="add-button-label">
+    <storey-typography variant="body-md">
+      {{ label }}
+    </storey-typography>
+  </span>
+</button>

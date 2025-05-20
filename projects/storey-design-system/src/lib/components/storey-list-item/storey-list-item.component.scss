@@ -1,0 +1,34 @@
+@import '../../../styles/_variables.scss';
+
+.storey-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  height: 72px;
+  padding-left: 24px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary-container;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+}
+
+.list-title {
+  margin-bottom: 0.2rem;
+  @extend .ellipsis;
+}
+
+.list-details {
+  color: #4B5563;
+  @extend .ellipsis;
+}

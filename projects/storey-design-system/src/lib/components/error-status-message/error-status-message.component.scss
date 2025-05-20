@@ -1,0 +1,15 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8e0de;
+  border: 2px solid #d92d20;
+  border-radius: 16px;
+  padding: 2rem;
+  gap: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+} 

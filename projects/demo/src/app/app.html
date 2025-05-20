@@ -1,0 +1,25 @@
+<ng-container *ngIf="!isStoreyChallengeRoute(); else challengePage">
+  <div class="storybook-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">Storey - SD</div>
+      <nav>
+        <a routerLink="typography" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Typography</a>
+        <a routerLink="card" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Card</a>
+        <a routerLink="tag" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Tag</a>
+        <a routerLink="supplies-selector" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Supplies
+          Selector</a>
+      </nav>
+      <div class="sidebar-special">
+        <a routerLink="storey-challenge" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <strong>Storey Challenge</strong>
+        </a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</ng-container>
+<ng-template #challengePage>
+  <router-outlet></router-outlet>
+</ng-template>

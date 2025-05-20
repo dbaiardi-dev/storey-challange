@@ -1,0 +1,8 @@
+<span [ngClass]="getClasses()" [ngStyle]="getStyle()">
+  <ng-container *ngIf="html; else defaultContent">
+    <span [innerHTML]="html"></span>
+  </ng-container>
+  <ng-template #defaultContent>
+    <ng-content></ng-content>
+  </ng-template>
+</span> 

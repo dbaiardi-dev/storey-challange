@@ -1,0 +1,100 @@
+@import '../../../styles/variables';
+
+.heading-lg {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 45px;
+  letter-spacing: 0.08em;
+}
+
+.heading-md {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.08em;
+}
+
+.heading-sm {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.08em;
+}
+
+.body-lg {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.08em;
+}
+
+.body-md {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.body-sm {
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+.body-sm-2 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+.body-md-2 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+// Color utility classes
+.text-primary { color: $color-primary; }
+.text-primary-main { color: $color-primary-main; }
+.text-primary-container { color: $color-primary-container; }
+.text-primary-accent { color: $color-primary-accent; }
+.text-on-primary-container { color: $color-on-primary-container; }
+.text-surface { color: $color-surface; }
+.text-neutral-placeholder { color: $color-neutral-placeholder; }
+.text-neutral-gray { color: $color-neutral-gray; }
+.text-neutral-dark-gray { color: $color-neutral-dark-gray; }
+.text-dark-gray { color: $color-dark-gray; }
+.text-middle-gray { color: $color-middle-gray; }  
+.text-warning { color: $color-warning; }
+
+@media (max-width: 768px) {
+  .heading-lg {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .body-lg {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .body-md {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+  .body-sm {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

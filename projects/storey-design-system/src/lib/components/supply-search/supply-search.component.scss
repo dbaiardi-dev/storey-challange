@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+.search-container {
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px 16px;
+    padding-right: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    &::placeholder {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: $color-neutral-gray;
+    }   
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+    pointer-events: none;
+    font-size: 1.1em;
+  }
+  
