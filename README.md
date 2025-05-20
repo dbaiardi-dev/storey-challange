@@ -81,13 +81,6 @@ La app estará disponible en [http://localhost:4200](http://localhost:4200).
 - Se utiliza `pnpm` como gestor de paquetes
 - El proyecto simula un backend con JSON Server
 
-## 📚 Buenas Prácticas
-
-- Modelos centralizados para evitar duplicidad
-- Componentes autónomos y reutilizables
-- Estado visual de carga y vacío implementado de forma clara
-- Código comentado, limpio y escalable
-
 ## 💡 Consideraciones Finales
 
 - Se utilizó FontAwesome para íconos con el fin de agilizar el desarrollo. Algunos íconos personalizados fueron exportados desde Figma.
