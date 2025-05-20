@@ -73,15 +73,6 @@ La app estará disponible en [http://localhost:4200](http://localhost:4200).
 
 [Ver diseño en Figma](https://www.figma.com/design/gdO8zua1DWzUoAY8S387tq/Challenge---Storey?node-id=0-1&p=f&t=RUJ1cI9i3wQ9MgLY-0)
 
-> Solicitar clave de acceso al equipo de Storey.
-
-## 🤝 Contribución
-
-1. Haz fork del proyecto
-2. Crea una rama (`git checkout -b feature/NombreDeTuFeature`)
-3. Commitea tus cambios (`git commit -m 'Agrega nueva feature'`)
-4. Haz push a tu rama (`git push origin feature/NombreDeTuFeature`)
-5. Abre un Pull Request
 
 ## 📝 Notas Técnicas
 
